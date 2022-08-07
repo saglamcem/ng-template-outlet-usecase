@@ -1,5 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, NgModule } from '@angular/core';
+import {
+  Component,
+  ContentChild,
+  Input,
+  NgModule,
+  TemplateRef,
+} from '@angular/core';
 
 @Component({
   selector: 'app-table',
@@ -8,6 +14,8 @@ import { Component, Input, NgModule } from '@angular/core';
 })
 export class CustomTableComponent {
   @Input() data: any[];
+  @ContentChild('headers') headers: TemplateRef<any> | undefined;
+  @ContentChild('rows') rows: TemplateRef<any> | undefined;
 }
 
 @NgModule({
