@@ -2,10 +2,9 @@ import { CommonModule } from '@angular/common';
 import { Component, NgModule } from '@angular/core';
 
 @Component({
-  selector: 'app-home',
+  selector: 'my-app',
   template: `
     <!-- No templates provided, will use default layout -->
-    <h1>Testing</h1>
     <app-table [data]="employees"></app-table>
     <!-- Basic configured template -->
     <app-table [data]="employees">
